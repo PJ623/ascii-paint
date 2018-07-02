@@ -180,10 +180,12 @@ class TextCanvas extends Canvas {
             if (char == "") {
                 char = " ";
             }
+            
+            str += char;
+
             if (x == this.width - 1) {
                 str += "\n";
             }
-            str += char;
         });
 
         return str;
