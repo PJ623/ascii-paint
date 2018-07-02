@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>
+        ASCII Paint
+    </title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+
+<body>
+    <div class="full-width">
+        <div>
+            <div class="full-width">
+                <div>
+                    <h1 class="full-width">
+                        ASCII Paint
+                    </h1>
+                    <p class="full-width">
+                        written by&nbsp;
+                        <a href="https://github.com/PJ623/pixel-paint" target="_blank">PJ623</a>
+                    </p>
+                    <div id="canvas">
+                    </div>
+                    <div class="flex-center side-panel">
+                        <button id="set-size-button" disabled>Set Canvas Size</button>
+                        <button id="clear-button">Clear</button>
+                        <button id="stringify-button">Stringify and Copy to Clipboard</button>
+                        <textarea id="rendering-canvas"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="canvas.js"></script>
+    <script src="textCanvas.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+#canvas {
+    display: inline-block;
+    border-style: solid;
+    border-width: 1px;
+    margin: 1em;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:  monospace;
+}
+
+.cell {
+    width: 1ch;
+    height: 1em;
+    box-sizing: border-box;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.control-button {
+    display: block;
+}
+
+.full-width {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.row{
+    height: 1em;
+    margin: 0px;
+    padding: 0px;
+    display: block;
+}
+
+.cell:focus {
+    box-sizing: border-box;
+    border-bottom: 1px solid black;
+    outline: none;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 1em 0em 1em;
+}
+
+#rendering-canvas {
+    border: 1px solid black;
+    white-space: pre;
+    display: none;
+}
