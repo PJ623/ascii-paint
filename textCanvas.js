@@ -111,11 +111,11 @@ class TextCanvas extends Canvas {
 
                 // wrap backwards
                 if (position.x == 0 && event.keyCode == 37) {
-                    vec = new this.Vector((this.width - 1), -1);
+                    vec = new this.Vector((this.width - 1), 0);
 
                     // wrap forwards
                 } else if (position.x == this.width - 1 && event.keyCode == 39) {
-                    vec = new this.Vector(-(this.width - 1), 1);
+                    vec = new this.Vector(-(this.width - 1), 0);
 
                     // wrap upwards
                 } else if (position.y == 0 && event.keyCode == 38) {
