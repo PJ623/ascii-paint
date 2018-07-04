@@ -41,9 +41,10 @@
             <hr>
             <div class="flex-center">
                 <div>
-                    <input type="text" id="width-input" class="dimension-input" placeholder="width" maxlength="5"> X
-                    <input type="text" id="height-input" class="dimension-input" placeholder="height" maxlength="5">
+                    <input type="text" id="width-input" class="dimension-input" placeholder="width" maxlength="5" required pattern="\d+"> X
+                    <input type="text" id="height-input" class="dimension-input" placeholder="height" maxlength="5" required pattern="\d+">
                 </div>
+                <span id="error-message" class="flex-center"></span>
             </div>
             <hr>
             <div class="flex-center">

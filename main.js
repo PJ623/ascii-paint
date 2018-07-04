@@ -27,7 +27,7 @@ function stringifyArt() {
 }
 
 function checkDimension(num) {
-    if (Number.isNaN(num) || num < 0 || num % 1 != 0) {
+    if (Number.isNaN(num) || num < 1 || num % 1 != 0) {
         return false;
     } else {
         return true;
@@ -48,14 +48,21 @@ let modal = document.getElementById("modal");
 
 document.getElementById("set-size-button").addEventListener("click", () => {
     modal.style.display = "flex";
+    document.getElementById("error-message").style.display = "none";
 });
 
 document.getElementById("set-size-submit-button").addEventListener("click", () => {
-    let width = Number(document.getElementById("width-input").value);
-    let height = Number(document.getElementById("height-input").value);
+    let widthInput = document.getElementById("width-input");
+    let heightInput = document.getElementById("height-input")
+    let errorMessage = document.getElementById("error-message");
+    let width = Number(widthInput.value);
+    let height = Number(heightInput.value);
 
     if (!checkDimension(width) || !checkDimension(height)) {
-        alert("Dimensions invalid.");
+        widthInput.value = "";
+        heightInput.value = "";
+        errorMessage.style.display = "block";
+        errorMessage.textContent = "The specified dimensions are invalid.";
     } else {
         makeCanvas(width, height);
         currentWidth = width;
